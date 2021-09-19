@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+</head>
+<body>
+<form th:method="post" th:action="@{/new}" th:object="${newroom}">
+    <div class="container">
+        <h1 class="fw-light"><center>Create new Room</center></h1>
+        <input type="text" th:field="*{name}" id="name" style="width:100%"/>
+        <select id="countries" th:field="*{countryName}" class="form-control mt-2">
+
+        </select>
+        <select id="state" th:field="*{isOnn}">
+            <option value="true">Lamp is Onn</option>
+            <option value="false">Lamp is Off</option>
+        </select>
+
+        <input type="submit" value="Save">
+    </div>
+</form>
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="js/app.js"></script>
+</html>
